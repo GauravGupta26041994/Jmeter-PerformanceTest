@@ -249,7 +249,7 @@
           </hashTree>
         </hashTree>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If loggedIn == true">
-          <stringProp name="IfController.condition">vars.get(&apos;LOGGED_IN&apos;) == &apos;true&apos;</stringProp>
+          <stringProp name="IfController.condition">${__groovy(vars.get(&apos;LOGGED_IN&apos;) != null &amp;&amp; vars.get(&apos;LOGGED_IN&apos;) == &apos;true&apos;,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -474,7 +474,7 @@
           <boolProp name="exclude_checkbox_state">false</boolProp>
         </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
         <hashTree/>
-        <ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Aggregate Graph" enabled="true">
+        <ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Aggregate Graph">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
